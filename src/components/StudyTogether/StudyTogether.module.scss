@@ -1,0 +1,106 @@
+.studyTogether {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+
+    .studyTogether__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        max-width: 360px;
+    }
+
+    .studyTogether__form {
+        display: flex;
+        flex-direction: column;
+        width: 530px;
+
+        input {
+            width: 95%;
+            height: 50px;
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            font-size: 18px;
+            background-color: #DFDFDF;
+        }
+
+        .massage_input {
+            width: 95%;
+            height: 100px;
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            font-size: 18px;
+            background-color: #DFDFDF;
+            resize: none;
+        }
+
+        button {
+            width: 235px;
+            height: 80px;
+            margin-top: 20px;
+            background-color: #2D2D2D;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 22px;
+
+            &:hover {
+                background-color: #181818;
+            }
+        }
+    }
+}
+
+// Add media queries for responsiveness
+@media (max-width: 768px) {
+    .studyTogether {
+        flex-direction: column; // Stack content vertically
+        align-items: center;
+        padding: 15px;
+
+        .studyTogether__form {
+            width: 100%; // Adjust form width for smaller screens
+
+            input,
+            .massage_input {
+                width: 100%; // Ensure inputs take full width
+            }
+
+            button {
+                width: 200px; // Adjust button size
+                height: 70px;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .studyTogether {
+        padding: 10px;
+
+        .studyTogether__content {
+            max-width: 100%; // Allow content to take full width
+        }
+
+        .studyTogether__form {
+            input,
+            .massage_input {
+                font-size: 16px; // Adjust font size for smaller screens
+                padding: 10px; // Reduce padding
+            }
+
+            button {
+                width: 180px; // Further adjust button size
+                height: 60px;
+                font-size: 18px;
+            }
+        }
+    }
+}

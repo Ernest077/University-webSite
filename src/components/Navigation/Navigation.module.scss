@@ -1,0 +1,41 @@
+.Navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 160px;
+    justify-content: center;
+    padding: 20px;
+    margin: 25px 0px 25px 0px;
+}
+
+.facultyItem {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.facultyImage {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.facultyTitle {
+    font-size: 23px;
+    font-weight: initial;
+    margin-bottom: 5px;
+}
+
+.facultyDescription {
+    font-size: 16px;
+    color: #666;
+}

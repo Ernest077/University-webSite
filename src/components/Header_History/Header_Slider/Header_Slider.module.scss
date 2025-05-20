@@ -1,0 +1,69 @@
+.Header_Slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 300px;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .prevButton,
+    .nextButton {
+        position: absolute;
+        top: 50%;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 500;
+        border-radius: 15px;
+        opacity: 70%;
+        transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .prevButton {
+        left: 10px;
+    }
+
+    .nextButton {
+        right: 10px;
+    }
+
+    .prevButton:hover,
+    .nextButton:hover {
+        background: rgba(0, 0, 0, 0.8);
+        transform: scale(1.1); // Add a slight zoom effect on hover
+    }
+}
+
+// Add media queries for responsiveness
+@media (max-width: 768px) {
+    .Header_Slider {
+        min-height: 250px; // Adjust height for smaller screens
+
+        .prevButton,
+        .nextButton {
+            padding: 8px; // Reduce button size
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .Header_Slider {
+        min-height: 200px; // Further adjust height for very small screens
+
+        .prevButton,
+        .nextButton {
+            padding: 6px; // Further reduce button size
+            font-size: 12px; // Adjust font size for smaller buttons
+        }
+    }
+}

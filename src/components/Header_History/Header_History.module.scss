@@ -1,0 +1,54 @@
+.Header_History {
+    height: 500px;
+    padding: 130px 60px 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 500px;
+
+        img {
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+        }
+
+        span {
+            width: 100%;
+            max-width: 330px;
+            margin-top: 20px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .Header_History {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 100px 20px 30px 20px;
+
+        div {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .Header_History {
+        padding: 80px 15px 20px 15px;
+
+        div {
+            img {
+                max-width: 100%;
+            }
+
+            span {
+                max-width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+@mixin centerContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Sponsors {
+    @include centerContent;
+    margin: 20px 0;
+
+    div {
+        @include centerContent;
+        width: 100%;
+        flex-wrap: wrap; /* Allow wrapping for smaller screens */
+        gap: 40px;
+        padding: 20px;
+
+        .sponsorItem {
+            @include centerContent;
+            flex: 1 1 150px; /* Flexible width with a minimum of 150px */
+            max-width: 120px; /* Optional: Limit the maximum width */
+
+            img {
+                height: auto;
+                max-width: 100%;
+                transition: transform 0.3s ease;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+
+    // Responsive adjustments
+    @media (max-width: 768px) {
+        div {
+            gap: 20px; /* Reduce gap for smaller screens */
+        }
+
+        .sponsorItem {
+            flex: 1 1 120px; /* Adjust minimum width for tablets */
+        }
+    }
+
+    @media (max-width: 480px) {
+        div {
+            gap: 15px; /* Further reduce gap for mobile devices */
+        }
+
+        .sponsorItem {
+            flex: 1 1 100px; /* Adjust minimum width for mobile */
+        }
+
+        .sponsorItem img {
+            max-width: 80%; /* Reduce image size for mobile */
+        }
+    }
+}
